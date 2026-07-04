@@ -1,0 +1,27 @@
+body{
+
+background:var(--background);
+
+color:white;
+
+font-family:Inter,sans-serif;
+
+}
+
+section{
+
+padding:var(--space-xxl) 10%;
+
+min-height:100vh;
+
+}
+
+main{
+
+display:flex;
+
+flex-direction:column;
+
+gap:var(--space-xl);
+
+}

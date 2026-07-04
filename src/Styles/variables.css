@@ -1,0 +1,32 @@
+:root{
+
+--background:#09090b;
+--surface:#141418;
+--surface2:#1f1f27;
+
+--primary:#8b5cf6;
+--secondary:#22d3ee;
+
+--text:#ffffff;
+--text-light:#b4b4b4;
+
+/* Fibonacci */
+
+--space-xs:8px;
+--space-sm:13px;
+--space-md:21px;
+--space-lg:34px;
+--space-xl:55px;
+--space-xxl:89px;
+
+/* Golden Ratio */
+
+--font-small:1rem;
+--font-body:1.25rem;
+--font-h3:2rem;
+--font-h2:3.2rem;
+--font-h1:5rem;
+
+--radius:20px;
+
+}

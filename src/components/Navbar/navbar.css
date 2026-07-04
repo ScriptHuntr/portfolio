@@ -1,0 +1,163 @@
+/* ===========================
+   RESET (indispensable pour un centrage fiable)
+=========================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* spacing between logo, links, socials */
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #8b5cf6;
+}
+
+/* ===========================
+   MENU
+=========================== */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.nav-links a {
+  position: relative;
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* underline animation */
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #8b5cf6, #22d3ee);
+  transition: .35s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.nav-btn {
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: .3s;
+}
+
+.nav-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, .35);
+}
+
+/* ===========================
+   MOBILE ICON
+=========================== */
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+  .navbar {
+    width: calc(100% - 20px);
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px;
+
+    background: rgba(15, 23, 42, .98);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: .35s;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .navbar {
+    height: 65px;
+  }
+}
